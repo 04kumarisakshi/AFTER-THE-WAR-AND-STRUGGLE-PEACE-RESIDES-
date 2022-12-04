@@ -1,0 +1,29 @@
+'''Polycarp has guessed three positive integers a, b and c. He keeps these numbers in secret, but he writes down four numbers on a board in arbitrary order — their pairwise sums (three numbers) and sum of all three numbers (one number). So, there are four numbers on a board in random order: a+b, a+c, b+c and a+b+c.
+
+You have to guess three numbers a, b and c using given numbers. Print three guessed integers in any order.
+
+Pay attention that some given numbers a, b and c can be equal (it is also possible that a=b=c).'''
+                       
+
+                                            python solution
+p=int(input())
+q=int(input())
+r=int(input())
+s=int(input())
+li=[p,q,r,s]
+li.sort()
+print(li[3]-li[0])
+print(li[3]-li[1])
+print(li[3]-li[2])
+                                       c++ solution
+                                       
+ #include<bits/stdc++.h>
+using namespace std;
+int main()
+{ int arr[4];
+for(int i=0;i<4;i++)
+     cin>>arr[i];
+    sort(arr,arr+4);
+    cout<<arr[3]-arr[0]<<" "<<arr[3]-arr[1]<<" "<<arr[3]-arr[2];
+}                                      
+                                       
