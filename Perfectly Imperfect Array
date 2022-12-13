@@ -1,0 +1,47 @@
+/*Given an array a of length n, tell us whether it has a non-empty subsequence such that the product of its elements is not a perfect square.
+
+A sequence b is a subsequence of an array a if b can be obtained from a by deleting some (possibly zero) elements.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+bool isPerfectSquare(long double x)
+{
+    if (x >= 0) {
+ 
+        long long sr = sqrt(x);
+        return (sr * sr == x);
+    }
+ 
+    return false;
+}
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--){
+        ll n,num=0;
+        cin >> n;
+ 
+        ll a[n];
+        for(int i = 0; i < n ; i++){
+            cin >> a[i];
+        }
+ 
+        for(int i = 0; i < n ; i++){
+            if(isPerfectSquare(a[i])){
+                num++;
+            }   
+        }
+ 
+        if(num==n){
+            cout << "NO" << endl;
+        }
+        else{
+            cout << "YES" << endl;
+        }
+ 
+    }
+ 
+    return 0;
+}
